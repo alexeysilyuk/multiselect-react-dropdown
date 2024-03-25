@@ -27,10 +27,10 @@ export interface IMultiselectProps {
     showArrow?: boolean,
     keepSearchTerm?: boolean,
     customCloseIcon?: React.ReactNode | string,
-    customArrow?: any;
-    disable?: boolean;
-    className?: string;
-    selectedValueDecorator?: (v:string, option: any) => React.ReactNode | string;
-    optionValueDecorator?: (v:string, option: any) => React.ReactNode | string
+    customArrow?: any,
+    disable?: boolean,
+    className?: string,
+    selectedValueDecorator?: (v:string, option: any) => React.ReactNode | string,
+    optionValueDecorator?: (v:string, option: any) => React.ReactNode | string,
     hideSelectedList?: boolean
 }
