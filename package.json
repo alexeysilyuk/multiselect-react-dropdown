@@ -1,6 +1,6 @@
 {
-  "name": "multiselect-react-dropdown",
-  "version": "2.0.24",
+  "name": "multiselect-react-dropdown-readonly",
+  "version": "1.0.0",
   "description": "React multiselect dropdown component with search and various features",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
