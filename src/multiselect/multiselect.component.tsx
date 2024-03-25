@@ -546,7 +546,7 @@ export class Multiselect extends React.Component<IMultiselectProps, any> {
 
   renderMultiselectContainer() {
     const { inputValue, toggleOptionsList, selectedValues } = this.state;
-    const { placeholder, style, singleSelect, id, name, hidePlaceholder, disable, showArrow, className, customArrow, hideSelectedList } = this.props;
+    const { placeholder, style, singleSelect, id, name, hidePlaceholder, disable, showArrow, className, customArrow, hideSelectedList, readOnly } = this.props;
     return (
       <div className={`multiselect-container multiSelectContainer ${disable ? `disable_ms` : ''} ${className || ''}`} id={id || 'multiselectContainerReact'} style={style['multiselectContainer']}>
         <div className={`search-wrapper searchWrapper ${singleSelect ? 'singleSelect' : ''}`}
@@ -570,6 +570,7 @@ export class Multiselect extends React.Component<IMultiselectProps, any> {
             style={style['inputField']}
             autoComplete="off"
             disabled={singleSelect || disable}
+	    readOnly={readOnly || false}
           />
           {(singleSelect || showArrow) && (
             <>
@@ -629,5 +630,6 @@ Multiselect.defaultProps = {
   className: '',
   customArrow: undefined,
   selectedValueDecorator: v => v,
-  optionValueDecorator: v => v
+  optionValueDecorator: v => v,
+  readOnly: false
 } as IMultiselectProps;
